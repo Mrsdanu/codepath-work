@@ -1,6 +1,9 @@
 import functions
-import PySimpleGUI
+import PySimpleGUI as sg
 
-Findow = PySimpleGUI.Window("My To Do App", layout=[""])
-Findow.read()
-Findow.close()
+label=sg.Text("Type in a to-do")
+input_box=sg.InputText(tooltip="Enter todo")
+
+window = sg.Window("My To Do App", layout=[[label, input_box]])
+window.read()
+window.close()
